@@ -1,0 +1,51 @@
+:root{
+  --cor-fundo1: #556B2F;    /* Verde musgo escuro */
+  --cor-fundo2: #F5F5DC;    /* Bege claro */
+  --cor-fundo3: #78866B;    /* Verde musgo claro / acinzentado */
+  --cor-fundo4: #A9BA9D;    /* Verde pálido / suave */
+  --cor-principal: #6B8E23; /* Verde oliva (mais equilibrado) */
+  --cor-secundaria: #A9BA9D; /* Verde claro suave */
+  --cor-destaque: #FFB300;  /* Amarelo queimado, tom terroso para destaque */
+  --cor-texto: #FFFFFF;     /* Texto branco para contraste */
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, var(--cor-fundo1), var(--cor-fundo2), var(--cor-fundo3), var(--cor-fundo4));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.caixa-principal{
+  background-color: var(--cor-principal);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+h1{
+  color: var(--cor-destaque);
+}
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+button:hover{
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
+}
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
